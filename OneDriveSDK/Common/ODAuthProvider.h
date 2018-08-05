@@ -68,6 +68,8 @@ typedef void(^AuthCompletion)(NSError *error);
  */
 - (void) authenticateWithAccountSession:(ODAccountSession *)session completion:(void (^)(NSError *error))completionHandler;
 
+- (void) refreshAndStoreAccountSession:(ODAccountSession *)session withCompletion:(void (^)(NSError *error))completionHandler;
+
 /**
    Signs out the current AuthProvider.
    @param completionHandler The completion handler to be called when sign out has completed.
